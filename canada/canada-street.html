@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-image: url("street-1-glitch2.jpg");
+            background-color: black;
+            background-position: center;
+            background-size: 57%;
+            height: 100vh;
+            color: white;
+        }
+
+        a:link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            }
+
+        a:visited {
+            color: rgb(255, 255, 255);
+        }
+        a:hover {
+            color: violet;
+            text-decoration: none;
+        }
+        a:active {
+            color: violet;
+            text-decoration: underline;
+        }
+
+        .wrapper {
+            position: relative;
+            display: block;
+            height: 400px;
+            width: 600px;
+            /* background-color: pink; */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        p {
+            letter-spacing: 7px;
+            text-align: center;
+        }
+
+        .text {
+            position: absolute;
+            /* display: block; */
+            height: 100px;
+            width: 550px;
+            /* background-color: blue; */
+            left: -42%;
+            top: 82%;
+            transform: translate(0, -50%);
+            z-index: 1;
+        }
+
+        .snow {
+            position: absolute;
+            left: 55%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+        }
+
+        .earth {
+            position: absolute;
+            left: 166%;
+            bottom: 85%;
+            height: 30px;
+            cursor: zoom-in;
+        }
+
+        .caminho {
+            position: absolute;
+            display: block;
+            top: 57%;
+            right: 64%;
+            height: 50px;
+            width: 170px;
+            /* background-color: blue; */
+            cursor: help;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>street</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="text">
+            <p>
+                <a href="../2016/2016-more.html">
+                    you could be my summer lover
+                </a>
+            </p>
+        </div>
+        <div>
+            <a href="../medo-corona/medo.html" class="caminho">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>
