@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            color: black;
+            background-image: url("canada-niagara-square.jpg");
+            background-position: initial;
+            background-size: 80%;
+        }
+
+        .citation-wrapper {
+            position: absolute;
+            /* float: left; */
+            /* background-color: navy; */
+            width: 600px;
+            height: 260px;
+            text-align: right;
+            z-index: 1;
+            display: block;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper-all {
+            position: relative;
+            display: block;
+            /* background-color: blueviolet; */
+            width: 800px;
+            height: 300px;
+            left: 44%;
+            top: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        textarea {
+            position: absolute;
+            right: 0;
+            /* margin: 10px; */
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            padding: 5px 14px;
+            margin: 8px 0;
+            /* box-sizing: border-box; */
+            color: black;
+            text-align: top;
+        }
+
+        button {
+            position: absolute;
+            right: -46%;
+            top: 11%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        label {
+            position: absolute;
+            left: 0%;
+            top: 70%;
+            width: 250px;
+            font-size: 110%;
+            letter-spacing: 12px;
+            color: black
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping mall</title>
+</head>
+<body>
+
+    <div class="wrapper-all">
+        <div class="citation-wrapper">
+            <label for="citation">vaporwave</label>
+            <!-- <input type="text" id="citation"> -->
+            <textarea name="tmasd" id="citation" cols="30" rows="10" style="resize: none;"></textarea>
+            <button onclick="checkcitation()">george lewis</button>
+        </div>
+    
+    </div>
+
+    <script>
+        function checkcitation() {
+            inputPass = document.getElementById("citation");
+            if(inputPass.value.toLowerCase() === "a arquitetura do próprio shopping, por trás dos logotipos e vitrines coloridas de neon, é anônima, uniforme, previsível e plana. os corredores são largos e repletos de clientes apressados. guardas de segurança desencorajam os retardatários e ajudam a movimentar o tráfego de pedestres. a muzak, se existir, reforça a imagem do shopping como um espaço público – um lugar onde estranhos encontram uns aos outros a caminho de seus destinos.") {
+                document.location.href = "#.html";
+            } else {
+                alert("Página 29");
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
