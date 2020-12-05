@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("tv-line-color1.gif");
+            background-position: center;
+            height: 100vh;
+        }
+
+        .wrapper {
+            position: absolute;
+            height: 100vh;
+            width: 608px;
+            /* background-color: rgb(0, 255, 98); */
+            left: 50%;
+            top: 0%;
+            z-index: -1;
+        }
+
+        .outer-wrapper {
+            height: 100vh;
+            width: 45%;
+            /* background-color: rgb(240, 160, 204); */
+            z-index: 2;
+        }
+
+        .wrapper-messages {
+            z-index: 3;
+        }
+
+        .template {
+            height: 100vh;
+            position: absolute;
+        }
+
+        .target {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background-color: deeppink;
+            bottom: 0%;
+        }
+
+        .send {
+            position: absolute;
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            bottom: 0;
+            right: 0;
+        }
+
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nao fantasma</title>
+</head>
+<body>
+    <div class="outer-wrapper">
+
+        <div class="wrapper-messages">
+            <img src="10.png" alt="" id="chat10">
+            <img src="12.png" alt="" id="chat12">
+            <img src="03.png" alt="" id="chat03">
+            <img src="09.png" alt="" id="chat09">
+            <img src="05.png" alt="" id="chat05">
+            <img src="06.png" alt="" id="chat06">
+            <img src="14.png" alt="" id="chat14">
+            <img src="08.png" alt="" id="chat08">
+            <img src="04.png" alt="" id="chat04">
+            <img src="01.png" alt="" id="chat01">
+            <img src="11.png" alt="" id="chat11">
+            <img src="02.png" alt="" id="chat02">
+            <img src="13.png" alt="" id="chat13">
+            <img src="07.png" alt="" id="chat07">
+        </div>
+
+        <div class="wrapper">
+            <img src="chat-window-template6.jpg" alt="" class="template" id="chat-bg">
+            <div class="target">
+            </div>
+            <a href="">
+                <div class="send">
+                </div>
+            </a>
+        </div>
+
+
+
+    </div>
+</body>
+<script>
+    function makedragdropable (element) {
+        element.onmousedown = function(event) {
+        element.style.position = 'absolute';
+        element.style.zIndex = 1000;
+
+        document.body.append(element);
+
+        function moveAt(pageX, pageY) {
+            element.style.left = pageX - element.offsetWidth / 2 + 'px';
+            element.style.top = pageY - element.offsetHeight / 2 + 'px';
+        }
+
+        moveAt(event.pageX, event.pageY);
+
+        function overlap(el1, el2) {
+            rect1 = el1.getBoundingClientRect();
+            rect2 = el2.getBoundingClientRect();
+
+            var overlap = !(rect1.right < rect2.left ||
+                rect1.left > rect2.right ||
+                rect1.bottom < rect2.top ||
+                rect1.top > rect2.bottom);
+            return overlap;
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+
+
+            let target = document.getElementsByClassName('target')[0];
+            if (overlap(element, target)) {
+               
+                if (element.id == "chat08") { 
+                    console.log("Overlap!")
+                    changeChat=document.getElementById("chat-bg")
+                    changeChat.src="chat-window-template6-ani.gif"
+                }
+                // if overlap, logic goes here
+            } else {
+                // if no overlap, logic goes here
+
+            }
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        element.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            element.onmouseup = null;
+        };
+        element.ondragstart = function() {
+        return false;
+        };
+};
+    }
+    makedragdropable (document.getElementById("chat01"))
+    makedragdropable (document.getElementById("chat02"))
+    makedragdropable (document.getElementById("chat03"))
+    makedragdropable (document.getElementById("chat04"))
+    makedragdropable (document.getElementById("chat05"))
+    makedragdropable (document.getElementById("chat06"))
+    makedragdropable (document.getElementById("chat07"))
+    makedragdropable (document.getElementById("chat08"))
+    makedragdropable (document.getElementById("chat09"))
+    makedragdropable (document.getElementById("chat10"))
+    makedragdropable (document.getElementById("chat11"))
+    makedragdropable (document.getElementById("chat12"))
+    makedragdropable (document.getElementById("chat13"))
+    makedragdropable (document.getElementById("chat14"))
+
+</script>
+</html>

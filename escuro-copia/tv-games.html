@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("2018-conversa-I---edit.jpg");
+            background-position: center;
+            background-size: 65%;
+            color: white;
+            height: 100vh;
+            width: 100vw;          
+        }
+
+        .text {
+            position: absolute;
+            letter-spacing: 10px;
+            bottom: 8%;
+            right: 43%;
+            width: 550px;
+            /* background-color: brown; */
+        }
+
+        .jp {
+            position: absolute;
+            letter-spacing: 5px;
+            font-size: 10px;
+            bottom: 25%;
+            right: 17%;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 500px;
+            width: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* background-color: gray; */
+        }
+
+        .tv {
+            position: absolute;
+            bottom: 0%;
+            right: 5%;
+        }
+
+        .pc {
+            position: absolute;;
+        }
+
+        .ps {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+        }
+
+        .nin {
+            position: absolute;
+            top: 15%;
+            right: 40%;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tv games</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <a href="../windows95/windows95.html">
+            <img src="pc-time2.gif" width="260px" id="pc" class="pc hidden" alt="">
+        </a>
+    
+        <img src="crt-tv.jpg" width="260px" onclick="pcShow()" class="tv" alt="">
+        
+        <p class="text">quero poder te encontrar também fora do jogo</p>
+
+        <p class="jp">ゲームが好き</p>
+    </div>
+</body>
+<script>
+    function pcShow() {
+        pcGlitchshow = document.getElementById("pc")
+        pcGlitchshow.classList.remove("hidden");  
+    }
+</script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            max-height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a:link {
+            color: #b700ff;
+            text-decoration: none;
+            }
+
+        a:visited {
+            color: #b700ff;
+        }
+        a:hover {
+            color: violet;
+        }
+        a:active {
+            color: white;
+            text-decoration: underline;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            background-image: url("space.gif");
+            background-position: center;
+            background-size: 80%;
+        }
+
+        .text{
+            color: white;
+            position: absolute;
+            top: 22%;
+            right: -40%;
+            height: 100px;
+            width: 550px;
+            cursor: default;
+            letter-spacing: 7px;
+            text-align: center;
+            /* background-color: blue; */
+            z-index: 1;
+        }
+
+        .content{
+            position: relative;
+            left: 45%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 460px;
+            /* background-color:cornflowerblue ; */
+        }
+
+        .darth, .leia, .solo, .letters, .vibes, .now {
+            position: absolute;
+        }
+
+        .leia {
+            top: 55%;
+            left: 40%;
+        }
+
+        .solo {
+            top: 60%;
+            left: 90%;
+        }
+
+        .letters {
+            top: 35%;
+            left: -30%;
+        }
+
+        .now {
+            top: 27%;
+            left: -22%;
+        }
+
+        .vibes {
+            top: -10%;
+            right: -27%;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sta uo</title>
+</head>
+<body>
+    <div class="content">
+            <div class="text">
+                <p>
+                    nascida em 1994 mas nunca tinha assistido star wars antes de te conhecer
+                    <br>
+                    pra eu assistir tudo tinha que ser <a href="#">contigo</a>
+                </p>
+            </div>
+            <img src="darth.jpg" class="darth" width="400px" alt="">
+            <img src="1977.png" class="vibes" width="400px" alt="">
+            <img src="now-2.gif" class="now" width="150px" alt="">
+            <img src="leia1.gif" class="leia" width="210px" alt="">
+            <img src="solo1.gif" class="solo" alt="">
+            <img src="vader-daddy.gif" class="letters" width="800px" alt="">
+    </div>
+</body>
+</html>
