@@ -79,13 +79,19 @@
 <body>
     <div class="wrapper">
         
-        <a href="../windows95/windows95.html">
-            <img src="pc-time2.gif" width="260px" id="pc" class="pc hidden" alt="">
-        </a>
+        <img src="pc-time2.gif" width="260px" id="pc" onclick="gamesShow()" class="pc hidden" alt="">
     
         <img src="crt-tv.jpg" width="260px" onclick="pcShow()" class="tv" alt="">
         
-        <p class="text">quero poder te encontrar também fora do jogo</p>
+        <a href="../metal-gear/metal-gear.html">
+            <img src="ps.png" width="100px" id="ps" class="ps hidden" alt="">
+        </a>
+        <a href="../link-do-zelda/link-do-zelda.html">
+            <img src="nin.png" width="100px" id="nin" class="nin hidden" alt="">
+        </a>
+
+        
+        <p class="text">me encontra dentro e fora do jogo</p>
 
         <p class="jp">ゲームが好き</p>
     </div>
@@ -94,6 +100,12 @@
     function pcShow() {
         pcGlitchshow = document.getElementById("pc")
         pcGlitchshow.classList.remove("hidden");  
+    }
+    function gamesShow() {
+        psShow = document.getElementById("ps")
+        psShow.classList.remove("hidden")
+        ninShow = document.getElementById("nin")
+        ninShow.classList.remove("hidden"); 
     }
 </script>
 </html>
