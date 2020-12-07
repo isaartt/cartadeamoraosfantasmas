@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(253, 210, 255);
+            height: 100vh;
+        }
+
+        .earthwrapper {
+            position: relative;
+            height: 600px;
+            width: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .earth {
+            position: absolute;
+        }
+
+        .zoomhere {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            bottom: 43%;
+            left: 49.5%;
+        }
+
+        .zoomhere2 {
+            position: absolute;
+            width: 37px;
+            height: 16px;
+            top: 6%;
+            left: 23.5%;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>earth</title>
+</head>
+<body>
+    <div class="earthwrapper">
+        <div class="earth" >
+            <img src="earth-1.png" width="600px" alt="">
+        </div>
+        <a href="beira-mar.html" tabindex="-1" class="zoomhere">
+        </a>
+        <a href="here-we-go.html" tabindex="-1" class="zoomhere2">
+        </a>
+    </div>
+    
+</body>
+</html>

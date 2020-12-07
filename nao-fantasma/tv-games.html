@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("2018-conversa-I---edit.jpg");
+            background-position: center;
+            background-size: 65%;
+            color: white;
+            height: 100vh;
+            width: 100vw;          
+        }
+
+        .text {
+            position: absolute;
+            letter-spacing: 10px;
+            bottom: 8%;
+            right: 43%;
+            width: 550px;
+        }
+
+        .jp {
+            position: absolute;
+            letter-spacing: 5px;
+            font-size: 10px;
+            bottom: 25%;
+            right: 17%;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 500px;
+            width: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tv {
+            position: absolute;
+            bottom: 0%;
+            right: 5%;
+        }
+
+        .pc {
+            position: absolute;;
+        }
+
+        .ps {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+        }
+
+        .nin {
+            position: absolute;
+            top: 15%;
+            right: 40%;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tv games</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <img src="pc-time2.gif" width="260px" id="pc" onclick="gamesShow()" class="pc hidden" alt="">
+    
+        <img src="crt-tv.jpg" width="260px" onclick="pcShow()" class="tv" alt="">
+        
+        <a href="../fantasma-imaterial/metal-gear.html">
+            <img src="ps.png" width="100px" id="ps" class="ps hidden" alt="">
+        </a>
+        <a href="link-do-zelda.html">
+            <img src="nin.png" width="100px" id="nin" class="nin hidden" alt="">
+        </a>
+
+        
+        <p class="text">me encontra dentro e fora do jogo</p>
+
+        <p class="jp">ゲームが好き</p>
+    </div>
+</body>
+<script>
+    function pcShow() {
+        pcGlitchshow = document.getElementById("pc")
+        pcGlitchshow.classList.remove("hidden");  
+    }
+    function gamesShow() {
+        psShow = document.getElementById("ps")
+        psShow.classList.remove("hidden")
+        ninShow = document.getElementById("nin")
+        ninShow.classList.remove("hidden"); 
+    }
+</script>
+</html>

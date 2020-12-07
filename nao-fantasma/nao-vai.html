@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a:link {
+            color: white;
+            text-decoration: none;
+            }
+        a:visited {
+            color: white;
+        }
+        a:hover {
+            color: violet;
+        }
+        a:active {
+            color: white;
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: black;
+            background-position: top;
+            background-size: 100%;
+            height: 100vh;
+            color: white;
+        }
+
+        .wrapper {
+            position: relative;
+            display: block;
+            height: 400px;
+            width: 600px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        p {
+            letter-spacing: 13px;
+            text-align: center;
+            /* font-size: 25px; */
+        }
+
+        .text {
+            position: absolute;
+            height: 100px;
+            width: 514px;
+            left: 28%;
+            top: 55%;
+            transform: translate(0, -50%);
+            z-index: 1;
+        }
+
+        .hands-container {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .link {
+            position: absolute;
+            display: block;
+            top: 2%;
+            left: -16%;
+            height: 77px;
+            width: 125px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>não vai</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="text">
+            <p>
+                me diz como eu faço pra tu não ir embora na <a href="../non-ghost-end.html">próxima</a>
+            </p>
+        </div>
+
+        <div class="hands-container">
+            <img src="hands.gif" alt="">
+        </div>
+
+        <div>
+            <a href="#" class="link">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

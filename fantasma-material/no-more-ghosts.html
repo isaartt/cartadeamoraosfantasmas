@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            body {
+                background-color: black;
+                background-image: url("tv-line-color1.gif");
+                background-position: center;
+                height: 100vh;
+            }
+
+            .wrapper {
+                position: relative;
+                height: 100vh;
+                /* background-color: rgb(0, 255, 98); */
+                z-index: -1;
+            }
+
+            .outer-wrapper {
+                overflow-y: hidden;
+                height: 100vh;
+                width: 100%;
+                /* background-color: rgb(240, 160, 204); */
+                z-index: 2;
+            }
+
+            .wrapper-messages {
+                z-index: 3;
+                width: 50%;
+                /* background-color: red; */
+            }
+
+            .template {
+                height: 100vh;
+                position: absolute;
+            }
+
+            .row {
+            display: flex;
+            }
+
+            .column {
+            flex: 50%;
+            }
+
+            .target {
+                position: absolute;
+                height: 100px;
+                width: 250px;
+                /* background-color: deeppink; */
+                opacity: 0.5;
+                bottom: 0%;
+            }
+
+            .send {
+                position: absolute;
+                /* background-color: blue; */
+                opacity: 0.5;
+                height: 50px;
+                width: 50px;
+                bottom: 0px;
+                right: 0px;
+            }
+
+            /* Container holding the image and the text */
+            .container {
+                position: relative;
+                text-align: center;
+                display: inline-block;
+                color: white;
+            }
+
+            /* Bottom left text */
+            .bottom-left {
+                position: absolute;
+                bottom: 7%;
+                left: 0;
+            }
+
+            /* Top left text */
+            .top-left {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+            }
+
+            /* Top right text */
+            .top-right {
+                position: absolute;
+                top: 8px;
+                right: 16px;
+            }
+
+            /* Bottom right text */
+            .bottom-right {
+                position: absolute;
+                bottom: 4px;
+                right: 0;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .chat-bubble {
+                position: absolute;
+            }
+
+        </style>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sem mais fantasmas</title>
+    </head>
+    <body>
+        <div class="outer-wrapper row">
+            <div class="wrapper-messages column">
+                <img src="10.png" alt="" id="chat10" class="chat-bubble" style="top: 17%; left: 5%;" />
+                <img src="12.png" alt="" id="chat12" class="chat-bubble" style="top: 38%; left: 23%;" />
+                <img src="03.png" alt="" id="chat03" class="chat-bubble" style="top: 7%; left: 10%;" />
+                <img src="09.png" alt="" id="chat09" class="chat-bubble" style="top: 31%; left: 3%;" />
+                <img src="05.png" alt="" id="chat05" class="chat-bubble" style="top: 53%; left: 5%;" />
+                <img src="06.png" alt="" id="chat06" class="chat-bubble" style="top: 21%; left: 20%;" />
+                <img src="14.png" alt="" id="chat14" class="chat-bubble" style="top: 67%; left: 2%;" />
+                <img src="08.png" alt="" id="chat08" class="chat-bubble" style="top: 43%; left: 11%;" />
+                <img src="04.png" alt="" id="chat04" class="chat-bubble" style="top: 24%; left: 3%;" />
+                <img src="01.png" alt="" id="chat01" class="chat-bubble" style="top: 80%; left: 27%;" />
+                <img src="11.png" alt="" id="chat11" class="chat-bubble" style="top: 79%; left: 1%;" />
+                <img src="02.png" alt="" id="chat02" class="chat-bubble" style="top: 87%; left: 20%;" />
+                <img src="13.png" alt="" id="chat13" class="chat-bubble" style="top: 60%; left: 20%;" />
+                <img src="07.png" alt="" id="chat07" class="chat-bubble" style="top: 27%; left: 26%;" />
+            </div>
+
+            <div class="column">
+                <div class="container">
+                    <img
+                        src="chat-window-template6.jpg"
+                        alt="Snow"
+                        id="chat-bg"
+                        style="width: auto; height: 100vh;"
+                    />
+                    <div class="bottom-left">
+                        <div class="target"></div>
+                    </div>
+                    <div class="bottom-right">
+                        <a href="">
+                            <div class="send hidden"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="wrapper">
+            <img src="chat-window-template6.png" alt="" class="template" id="chat-bg">
+            <div class="target">
+            </div>
+            <a href="">
+                <div class="send">
+                </div>
+            </a>
+        </div> -->
+        </div>
+    </body>
+    <script>
+        function makedragdropable(element) {
+            element.onmousedown = function (event) {
+                let shiftX = event.clientX - element.getBoundingClientRect().left;
+                let shiftY = event.clientY - element.getBoundingClientRect().top;
+
+                element.style.position = "absolute";
+                element.style.zIndex = 1000;
+
+                document.body.append(element);
+
+                function moveAt(pageX, pageY) {
+                    element.style.left = pageX - shiftX + 'px';
+                    element.style.top = pageY - shiftY + 'px';
+                }
+
+                moveAt(event.pageX, event.pageY);
+
+                function overlap(el1, el2) {
+                    rect1 = el1.getBoundingClientRect();
+                    rect2 = el2.getBoundingClientRect();
+
+                    var overlap = !(
+                        rect1.right < rect2.left ||
+                        rect1.left > rect2.right ||
+                        rect1.bottom < rect2.top ||
+                        rect1.top > rect2.bottom
+                    );
+                    return overlap;
+                }
+
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);
+
+                    let target = document.getElementsByClassName("target")[0];
+                    if (overlap(element, target)) {
+                        if (element.id == "chat08") {
+                            changeChat = document.getElementById("chat-bg");
+                            changeChat.src = "chat-window-template6-ani.gif";
+                            sendButton = document.getElementsByClassName("send")[0];
+                            sendButton.classList.remove("hidden");
+                        }
+                        // if overlap, logic goes here
+                    } else {
+                        // if no overlap, logic goes here
+                    }
+                }
+
+                document.addEventListener("mousemove", onMouseMove);
+
+                element.onmouseup = function () {
+                    document.removeEventListener("mousemove", onMouseMove);
+                    element.onmouseup = null;
+                };
+                element.ondragstart = function () {
+                    return false;
+                };
+            };
+        }
+        makedragdropable(document.getElementById("chat01"));
+        makedragdropable(document.getElementById("chat02"));
+        makedragdropable(document.getElementById("chat03"));
+        makedragdropable(document.getElementById("chat04"));
+        makedragdropable(document.getElementById("chat05"));
+        makedragdropable(document.getElementById("chat06"));
+        makedragdropable(document.getElementById("chat07"));
+        makedragdropable(document.getElementById("chat08"));
+        makedragdropable(document.getElementById("chat09"));
+        makedragdropable(document.getElementById("chat10"));
+        makedragdropable(document.getElementById("chat11"));
+        makedragdropable(document.getElementById("chat12"));
+        makedragdropable(document.getElementById("chat13"));
+        makedragdropable(document.getElementById("chat14"));
+    </script>
+</html>

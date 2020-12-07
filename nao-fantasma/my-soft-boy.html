@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link {
+            color: #b700ff;
+            }
+        a:visited {
+            color: #b700ff;
+        }
+        a:hover {
+            color: violet;
+        }
+        a:active {
+            color: white;
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("bg-rose.png");
+            background-position: center;
+            background-size: 100%;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .wrapper {
+            position: relative;
+            display: block;
+            height: 268px;
+            width: 300px;
+            /* background-color: rgb(37, 37, 37); */
+            left: 59%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+        }
+
+        p {
+            letter-spacing: 100px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .chat {
+            position: absolute;
+            /* background-color: blue; */
+            left: 0%;
+            top: 0%;
+        }
+
+        .date {
+            position: absolute;
+            right: 30%;
+            bottom: 0%;
+        }
+
+
+        .link {
+            position: absolute;
+            display: block;
+            top: 15%;
+            left: -15%;
+            height: 50px;
+            width: 50px;
+            cursor: grab;
+        }
+
+        .grab {
+            position: absolute;
+            display: block;
+            top: 35%;
+            left: 49%;
+            height: 80px;
+            width: 247px;
+            cursor: grab;
+            z-index: 1;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pele macia</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="grab">
+        </div>
+
+        <img class="chat" width="405px" src="pele-macia1-chatedit.png" alt="">
+        
+        <img class="date" width="400px" src="18deagosto.gif" alt="">
+
+        <div>
+            <a href="daybyday.html" class="link">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>
