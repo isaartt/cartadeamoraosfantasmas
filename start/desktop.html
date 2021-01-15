@@ -77,13 +77,13 @@
     <div class="wrapper">
         <div class="desktop">
             <a href="../fantasma-imaterial/fantasma-deslizando.html">
-                <img src="mypc.png" width="70" alt="">
+                <img src="mypc.png" id="immaterial-ghost-icon" width="70" alt="">
             </a>
             <a href="../nao-fantasma/cont-ubiq.html">
-                <img src="inbox.png" width="72" alt="">
+                <img src="inbox.png" id="non-ghost-icon" width="72" alt="">
             </a>
             <a href="../fantasma-material/quarentena.html">
-                <img src="network.png" width="72" alt="">
+                <img src="network.png" id="material-ghost-icon" width="72" alt="">
             </a>
             <a href="../end/windows95pcs.html">
                 <img src="msn.png" width="72" alt="">
@@ -115,6 +115,40 @@
 </body>
 
 <script> 
+    var immaterialGhostIcon = "mypc.png";
+    var immaterialGhostIconCleared = "mypc.png";
+    var nonGhostIcon = "inbox.png";
+    var nonGhostIconCleared = "inbox.png";
+    var materialGhostIcon = "network.png";
+    var materialGhostIconCleared = "network.png";
+
+    // Ed stuff below
+    var immaterialGhostImageRef = window.document.getElementById("immaterial-ghost-icon");
+    var materialGhostImageRef = window.document.getElementById("material-ghost-icon");
+    var nonGhostImageRef = window.document.getElementById("non-ghost-icon");
+
+    var hasImmaterialGhost = window.localStorage.getItem("immaterial_ghost", false);
+    var hasMaterialGhost = window.localStorage.getItem("material_ghost", false);
+    var hasNonGhost = window.localStorage.getItem("non_ghost", false);
+
+    if (hasImmaterialGhost) {
+        immaterialGhostImageRef.src = immaterialGhostIconCleared;
+    } else {
+        immaterialGhostImageRef.src = immaterialGhostIcon;
+    }
+
+    if (hasMaterialGhost) {
+        materialGhostImageRef.src = materialGhostIconCleared;
+    } else {
+        materialGhostImageRef.src = materialGhostIcon;
+    }
+    if (hasNonGhost) {
+        nonGhostImageRef.src = nonGhostIconCleared;
+    } else {
+        nonGhostImageRef.src = nonGhostIcon;
+    }
+
+
     clockTextSpan = document.getElementsByClassName('clock-text')[0];
     today = new Date();
     var minutes = today.getMinutes();

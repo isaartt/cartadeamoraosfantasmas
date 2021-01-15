@@ -104,9 +104,10 @@
     <script>
         function checkcitation() {
             inputPass = document.getElementById("citation");
-            if(inputPass.value.toLowerCase() === "não") {
+            if(inputPass.value.toLowerCase() === "não" || inputPass.value.toLowerCase() === "nao") {
                 document.location.href = "nao-vai.html";
             } else {
+                alert("Resposta errada");
                 document.location.href = "tv-games.html";
             }
         }
