@@ -77,16 +77,16 @@
     <div class="wrapper">
         <div class="desktop">
             <a href="../fantasma-imaterial/fantasma-deslizando.html">
-                <img src="mypc.png" id="immaterial-ghost-icon" width="70" alt="">
+                <img src="mypc1.png" id="immaterial-ghost-icon" width="70" alt="">
             </a>
             <a href="../nao-fantasma/cont-ubiq.html">
-                <img src="inbox.png" id="non-ghost-icon" width="72" alt="">
+                <img src="inbox2.png" id="non-ghost-icon" width="72" alt="">
             </a>
             <a href="../fantasma-material/quarentena.html">
-                <img src="network.png" id="material-ghost-icon" width="72" alt="">
+                <img src="network2.png" id="material-ghost-icon" width="72" alt="">
             </a>
             <a href="../end/windows95pcs.html">
-                <img src="msn.png" width="72" alt="">
+                <img src="msn.png" id="end-icon" width="72" alt="">
             </a>
             <a href="#">
                 <img src="case.png" width="72" alt="">
@@ -115,12 +115,12 @@
 </body>
 
 <script> 
-    var immaterialGhostIcon = "mypc.png";
-    var immaterialGhostIconCleared = "mypc.png";
-    var nonGhostIcon = "inbox.png";
-    var nonGhostIconCleared = "inbox.png";
-    var materialGhostIcon = "network.png";
-    var materialGhostIconCleared = "network.png";
+    var immaterialGhostIcon = "mypc1.png";
+    var immaterialGhostIconCleared = "mypc_cleared.png";
+    var nonGhostIcon = "inbox2.png";
+    var nonGhostIconCleared = "inbox_cleared.png";
+    var materialGhostIcon = "network2.png";
+    var materialGhostIconCleared = "network_cleared.png";
 
     // Ed stuff below
     var immaterialGhostImageRef = window.document.getElementById("immaterial-ghost-icon");
@@ -130,6 +130,10 @@
     var hasImmaterialGhost = window.localStorage.getItem("immaterial_ghost", false);
     var hasMaterialGhost = window.localStorage.getItem("material_ghost", false);
     var hasNonGhost = window.localStorage.getItem("non_ghost", false);
+    if (hasImmaterialGhost && hasMaterialGhost && hasNonGhost) {
+        var msnimageRef = window.document.getElementById("end-icon");
+        msnimageRef.src = "msn_green.png";
+    } 
 
     if (hasImmaterialGhost) {
         immaterialGhostImageRef.src = immaterialGhostIconCleared;
