@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('8qtrua/carta-aos-fantasmas');</script>
     <link rel="icon" href="../ghost2.ico" type="image/gif" sizes="16x16">
     <style>
         * {
@@ -16,7 +18,7 @@
             background-size: 65%;
             color: white;
             height: 100vh;
-            width: 100vw;          
+            width: 100vw;
         }
 
         .text {
@@ -70,7 +72,7 @@
             visibility: hidden;
         }
     </style>
-    
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,11 +80,11 @@
 </head>
 <body>
     <div class="wrapper">
-        
+
         <img src="pc-time2.gif" width="260px" id="pc" onclick="gamesShow()" class="pc hidden" alt="">
-    
+
         <img src="crt-tv.jpg" width="260px" onclick="pcShow()" class="tv" alt="">
-        
+
         <a href="metal-gear.html">
             <img src="ps.png" width="100px" id="ps" class="ps hidden" alt="">
         </a>
@@ -90,7 +92,7 @@
             <img src="nin.png" width="100px" id="nin" class="nin hidden" alt="">
         </a>
 
-        
+
         <p class="text">me encontra dentro e fora do jogo</p>
 
         <p class="jp">ゲームが好き</p>
@@ -99,13 +101,13 @@
 <script>
     function pcShow() {
         pcGlitchshow = document.getElementById("pc")
-        pcGlitchshow.classList.remove("hidden");  
+        pcGlitchshow.classList.remove("hidden");
     }
     function gamesShow() {
         psShow = document.getElementById("ps")
         psShow.classList.remove("hidden")
         ninShow = document.getElementById("nin")
-        ninShow.classList.remove("hidden"); 
+        ninShow.classList.remove("hidden");
     }
 </script>
 </html>

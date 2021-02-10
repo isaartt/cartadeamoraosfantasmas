@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('8qtrua/carta-aos-fantasmas');</script>
     <link rel="icon" href="../ghost2.ico" type="image/gif" sizes="16x16">
     <style>
     body {
         background-color: #008080;
         height: 100vh;
         margin: 0;
-        padding: 0;            
+        padding: 0;
     }
 
     .desktop {
         display: flex;
-        flex-direction: column;      
+        flex-direction: column;
     }
 
     .logo {
@@ -24,9 +26,9 @@
     }
 
     .wrapper {
-        display: flex;   
-        justify-content: space-between;             
-        height: calc(100vh - 30px);                 
+        display: flex;
+        justify-content: space-between;
+        height: calc(100vh - 30px);
     }
 
    .taskbar {
@@ -38,9 +40,9 @@
    }
 
    .startButton{
-        height: 22px;     
+        height: 22px;
         margin-left: 2px;
-        margin-top: 2px;   
+        margin-top: 2px;
    }
 
    .clock {
@@ -61,11 +63,11 @@
         align-items: center;
    }
 
-   .clock-text {           
+   .clock-text {
        position: absolute;
-       color: black; 
-       font-size: 10px; 
-       margin-top: 2px;         
+       color: black;
+       font-size: 10px;
+       margin-top: 2px;
    }
 
 </style>
@@ -100,7 +102,7 @@
             <img src="logospin.gif" width="300" alt="">
         </div>
         <div>
-            
+
         </div>
     </div>
     <div class="taskbar">
@@ -114,7 +116,7 @@
     </div>
 </body>
 
-<script> 
+<script>
     var immaterialGhostIcon = "mypc1.png";
     var immaterialGhostIconCleared = "mypc_cleared.png";
     var nonGhostIcon = "inbox2.png";
@@ -133,7 +135,7 @@
     if (hasImmaterialGhost && hasMaterialGhost && hasNonGhost) {
         var msnimageRef = window.document.getElementById("end-icon");
         msnimageRef.src = "msn_green.png";
-    } 
+    }
 
     if (hasImmaterialGhost) {
         immaterialGhostImageRef.src = immaterialGhostIconCleared;
@@ -160,14 +162,14 @@
         minutes = "0" + String(minutes);
     }
     clockTextSpan.innerHTML = today.getHours() + ":" + minutes
-    
-    setInterval(function() {        
+
+    setInterval(function() {
         today = new Date();
     var minutes = today.getMinutes();
     if (minutes < 10) {
         minutes = "0" + String(minutes);
     }
-    clockTextSpan.innerHTML = today.getHours() + ":" + minutes 
+    clockTextSpan.innerHTML = today.getHours() + ":" + minutes
     }, 3000) // in ms
 </script>
 </html>

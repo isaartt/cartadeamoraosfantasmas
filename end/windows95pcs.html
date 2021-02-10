@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('8qtrua/carta-aos-fantasmas');</script>
     <link rel="icon" href="../ghost2.ico" type="image/gif" sizes="16x16">
     <style>
 
@@ -8,12 +10,12 @@
             background-color: #008080;
             height: 100vh;
             margin: 0;
-            padding: 0;            
+            padding: 0;
         }
 
         .desktop {
             display: flex;
-            flex-direction: column;            
+            flex-direction: column;
         }
 
         .clickable {
@@ -21,10 +23,10 @@
         }
 
         .wrapper {
-            display: flex;   
-            justify-content: center;  
+            display: flex;
+            justify-content: center;
             align-items: center;
-            height: calc(100vh - 30px);                  
+            height: calc(100vh - 30px);
         }
 
        .taskbar {
@@ -36,9 +38,9 @@
        }
 
        .startButton{
-            height: 22px;     
+            height: 22px;
             margin-left: 2px;
-            margin-top: 2px;   
+            margin-top: 2px;
        }
 
        .clock {
@@ -59,11 +61,11 @@
             align-items: center;
        }
 
-       .clock-text {           
+       .clock-text {
            position: absolute;
-           color: black; 
-           font-size: 10px; 
-           margin-top: 2px;         
+           color: black;
+           font-size: 10px;
+           margin-top: 2px;
        }
 
     </style>
@@ -154,11 +156,11 @@
             <img src="mypc.png" width="70" alt="">
             <img src="mypc.png" width="70" alt="">
             <img src="mypc.png" width="70" alt="">
-            
+
             <a href="earthpage.html">
                 <img src="mypc.png" width="70" alt="">
             </a>
-            
+
             <img src="mypc.png" width="70" alt="">
             <img src="mypc.png" width="70" alt="">
         </div>
@@ -225,7 +227,7 @@
     </div>
 </body>
 
-<script> 
+<script>
     clockTextSpan = document.getElementsByClassName('clock-text')[0];
     today = new Date();
     var minutes = today.getMinutes();
@@ -233,14 +235,14 @@
         minutes = "0" + String(minutes);
     }
     clockTextSpan.innerHTML = today.getHours() + ":" + minutes
-    
-    setInterval(function() {        
+
+    setInterval(function() {
         today = new Date();
     var minutes = today.getMinutes();
     if (minutes < 10) {
         minutes = "0" + String(minutes);
     }
-    clockTextSpan.innerHTML = today.getHours() + ":" + minutes 
+    clockTextSpan.innerHTML = today.getHours() + ":" + minutes
     }, 3000) // in ms
 </script>
 </html>
