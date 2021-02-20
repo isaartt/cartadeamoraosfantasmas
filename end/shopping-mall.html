@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
     <script>window.LogRocket && window.LogRocket.init('8qtrua/carta-aos-fantasmas');</script>
@@ -62,8 +63,6 @@
 
         button {
             position: absolute;
-            right: -26%;
-            top: -9%;
             transform: translate(-50%, -50%);
             text-decoration: none;
             font-size: 15px;
@@ -85,34 +84,47 @@
             color: black
         }
 
+        .next {
+            right: -26%;
+            top: -9%;
+        }
+
+        .back {
+            left: 0%;
+            top: 0%;
+        }
     </style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shopping mall</title>
 </head>
+
 <body>
 
     <div class="wrapper-all">
         <div class="citation-wrapper">
             <label for="citation">me ajuda a me livrar desse fantasma</label>
             <textarea name="tmasd" id="citation" cols="30" rows="10" style="resize: none;"></textarea>
-            <button onclick="checkcitation()">quero voltar pra realidade</button>
+            <button class="next" onclick="checkcitation()">quero voltar pra realidade</button>
         </div>
-
+        <a href="../start/desktop.html">
+            <button class="back">voltar para o desktop</button>
+        </a>
     </div>
 
     <script>
         function checkcitation() {
             inputPass = document.getElementById("citation");
-            if(inputPass.value.toLowerCase() === "no calor do teu abraço um dia estaremos libertos de nossos fantasmas") {
+            if (inputPass.value.toLowerCase() === "no calor do teu abraço um dia estaremos libertos de nossos fantasmas") {
                 document.location.href = "wifi-cord.html";
             } else {
-                alert("insira a senha dos fantasmas conquistados");
+                alert("insira a senha dos três fantasmas conquistados");
             }
         }
     </script>
 
 
 </body>
+
 </html>
